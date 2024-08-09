@@ -272,48 +272,102 @@ span{
     resize: none; 
 }
 
+/* Tambahkan kode berikut untuk mengatur tampilan pada berbagai ukuran layar */
 
-@media(max-width:1285px){
-    html{
-        font-size: 55%;
+/* Ukuran layar kecil (mobile) */
+@media only screen and (max-width: 600px) {
+    .header {
+      padding: 2rem 5% 2rem;
     }
-    .services-container{
-        padding-bottom: 7rem;
-        grid-template-columns: repeat (2,1fr);
-        margin: 0 5rem;
+    .logo {
+      font-size: 2rem;
     }
-}
-@media(max-width:991px){
-    header{
-        padding: 2rem 3%;
+    .navbar a {
+      font-size: 1.5rem;
+      margin-left: 2rem;
     }
-    section{
-        padding: 10rem 3% 2rem;
+    .home-content h3 {
+      font-size: 2.5rem;
     }
-    .timeline-items::::before{
-        left: 7px;
+    .home-content h1 {
+      font-size: 5rem;
     }
-    .timeline-item:nth-child(odd){
-        padding-right: 0;
-        text-align: left;
+    .home-img img {
+      width: 50vw;
     }
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even){
-        padding-left: 37px;
+    .social-icons a {
+      width: 3.5rem;
+      height: 3.5rem;
     }
-    .timeline-dot{
-        left: 0;
+  }
+  
+  /* Ukuran layar sedang (tablet) */
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    .header {
+      padding: 3rem 10% 3rem;
     }
-    .services{
-        padding-bottom: 7rem;
+    .logo {
+      font-size: 2.5rem;
     }
-    .testimonials .wrapper{
-        grid-template-columns: repeat(1,1fr);
+    .navbar a {
+      font-size: 1.8rem;
+      margin-left: 3rem;
     }
-    .contact form{
-        flex-direction: column;
-    } 
-    .footer{
-        padding: 2rem 3%;
+    .home-content h3 {
+      font-size: 3rem;
     }
-}
+    .home-content h1 {
+      font-size: 6rem;
+    }
+    .home-img img {
+      width: 40vw;
+    }
+    .social-icons a {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  
+  /* Ukuran layar besar (desktop) */
+  @media only screen and (min-width: 993px) {
+    .header {
+      padding: 4rem 12% 4rem;
+    }
+    .logo {
+      font-size: 3rem;
+    }
+    .navbar a {
+      font-size: 2rem;
+      margin-left: 4rem;
+    }
+    .home-content h3 {
+      font-size: 3.5rem;
+    }
+    .home-content h1 {
+      font-size: 7rem;
+    }
+    .home-img img {
+      width: 30vw;
+    }
+    .social-icons a {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+/* Tambahkan kode berikut untuk mengatur tampilan pada berbagai perangkat */
+
+/* Perangkat mobile */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    /* Kode untuk mengatur tampilan pada perangkat mobile dengan orientasi portrait */
+  }
+  
+  /* Perangkat tablet */
+  @media only screen and (min-width: 601px) and (max-width: 992px) and (orientation: landscape) {
+    /* Kode untuk mengatur tampilan pada perangkat tablet dengan orientasi landscape */
+  }
+  
+  /* Perangkat desktop */
+  @media only screen and (min-width: 993px) and (orientation: landscape) {
+    /* Kode untuk mengatur tampilan pada perangkat desktop dengan orientasi landscape */
+  }
