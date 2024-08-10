@@ -133,6 +133,7 @@ document.addEventListener('mouseup', () => {
   audio.play();
 });
 
+
 const galleryItems = document.querySelectorAll('.gallery-item');
 const modal = document.querySelector('.modal');
 const modalImg = document.querySelector('.modal-img');
@@ -199,3 +200,4 @@ function updateGallery() {
   });
   requestAnimationFrame(updateGallery);
 }
+
