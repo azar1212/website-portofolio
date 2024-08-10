@@ -132,3 +132,70 @@ document.addEventListener('mousemove', (e) => {
 document.addEventListener('mouseup', () => {
   audio.play();
 });
+
+const galleryItems = document.querySelectorAll('.gallery-item');
+const modal = document.querySelector('.modal');
+const modalImg = document.querySelector('.modal-img');
+const modalClose = document.querySelector('.modal-close');
+
+
+galleryItems.forEach((item, index) => {
+  item.style.top = `${Math.random() * 100}%`;
+  item.style.left = `${Math.random() * 100}%`;
+  item.style.transform = `translate(-50%, -50%) scale(${Math.random() * 0.5 + 0.5})`;
+});
+
+setInterval(() => {
+  galleryItems.forEach((item, index) => {
+    item.style.top = `${Math.random() * 100}%`;
+    item.style.left = `${Math.random() * 100}%`;
+    item.style.transform = `translate(-50%, -50%) scale(${Math.random() * 0.5 + 0.5})`;
+  });
+}, 2000);
+
+function updateGallery() {
+  galleryItems.forEach((item, index) => {
+    item.style.top = `${Math.random() * 100}%`;
+    item.style.left = `${Math.random() * 100}%`;
+    item.style.transform = `translate(-50%, -50%) scale(${Math.random() * 0.5 + 0.5})`;
+  });
+  requestAnimationFrame(updateGallery);
+}
+
+
+galleryItems.forEach((img) => {
+  img.src = '2.jpg'; // Add src attribute to each image element
+  img.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+    modalImg.style.width = '100%'; // Add CSS styles to make modalImg visible
+    modalImg.style.height = '100%';
+    modalImg.style.objectFit = 'cover';
+  });
+});
+
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Add CSS styles to make the modal visible
+modal.style.position = 'fixed';
+modal.style.top = '0';
+modal.style.left = '0';
+modal.style.width = '100%';
+modal.style.height = '100%';
+modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+
+// Call updateGallery function
+window.onload = () => {
+  updateGallery();
+};
+
+function updateGallery() {
+  galleryItems.forEach((item, index) => {
+    item.style.top = `${Math.random() * 100}%`;
+    item.style.left = `${Math.random() * 100}%`;
+    item.style.transform = `translate(-50%, -50%) scale(${Math.random() * 0.5 + 0.5})`;
+  });
+  requestAnimationFrame(updateGallery);
+}
