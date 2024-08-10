@@ -808,7 +808,9 @@ span{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease-in-out;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .gallery-item img {
@@ -821,7 +823,10 @@ span{
     max-width: 100%;
     max-height: 100vh;
     filter: sharpen(1);
-    box-shadow: 0 0 50px var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
   }
